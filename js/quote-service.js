@@ -4,7 +4,7 @@ class QuoteService {
             const response = await fetch('https://quoteslate.vercel.app/api/quotes/random');
             const data = await response.json();
             return {
-                text: data.content,
+                text: data.quote,
                 author: data.author
             };
         } catch (error) {
